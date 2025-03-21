@@ -101,6 +101,7 @@ class KurobbsClient:
         :param failure_message: The message to log on failure.
         """
         resp = action_method()
+        logger.debug(resp)
         if resp.success:
             self.result[action_name] = success_message
         else:
